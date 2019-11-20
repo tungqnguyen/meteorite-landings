@@ -1,2 +1,0 @@
-mongoimport --db mydb--collection meoteorites --file "D:\zwift-code-exercise\backend\database\nasa-meteorites.json" --jsonArray
-id 2301 line 690 no mass property.

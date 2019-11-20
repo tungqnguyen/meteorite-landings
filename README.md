@@ -18,13 +18,13 @@ This project use MongoDB for database, hence, please download MongoDB before run
 
 4. Import JSON file into database:
 
-      In terminal, locate to MongoDB "bin" directory like step 2 and run command with the path to the JSON meteorites data: 
+      In terminal, locate to MongoDB "bin" directory like step 2 and run command with the --file path to "nasa-meteorites.json": 
       ```
       mongoimport --db mydb --collection meteorites --file "your\path\to\nasa-meteorites.json" --jsonArray
       ```
       Example: ```mongoimport --db mydb --collection meteorites --file "project\backend\database\nasa-meteorites.json" --jsonArray```
       
-      This will import the JSON data into MongoDB collection "meteorites"
+      This will import the JSON file nasa-meteorites.json into MongoDB collection "meteorites"
 
 ### Run Project
 

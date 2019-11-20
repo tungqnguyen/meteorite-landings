@@ -10,18 +10,21 @@ This project use MongoDB for database, hence, please download MongoDB before run
 
 1. Please visit [MongoDB download page](https://www.mongodb.com/download-center/community) and download version 4.2.1
 
-2. After installing MongoDB, initialize the database by locating to ```project\backend\database``` and run command ```node createDb.js``` in your terminal to create the database and collection.
+2. Start MongoDB service
 
-3. Import JSON file into database:
+      From your terminal, locate to ```path\to\MongoDB\Server\4.2\bin``` where your MongoDB is installed, default is ```C:\Program Files\MongoDB\Server\4.2\bin```. Run command ```mongo``` to start the service. You can check if MongoDB service is running in the Task Manager.
 
-      From your terminal, locate to ```path\to\MongoDB\Server\4.2\bin``` where your MongoDB is installed, default is ```C:\Program Files\MongoDB\Server\4.2\bin```
+3. After installing MongoDB and start the service, open a new terminal from your project directory and locate to ```\backend\database```, then run command ```node createDb.js``` to create the database and collection called "meteorites".
 
-      Then from the terminal, run command with the path to the JSON meteorites data: 
+4. Import JSON file into database:
+
+      In terminal, locate to MongoDB "bin" directory like step 2 and run command with the path to the JSON meteorites data: 
       ```
       mongoimport --db mydb --collection meteorites --file "your\path\to\nasa-meteorites.json" --jsonArray
       ```
-      Example: ```mongoimport --db mydb --collection meteorites --file "D:\zwift-code-exercise\backend\database\nasa-meteorites.json" --jsonArray```
-      This will import the JSON array into MongoDB collection "meteorites"
+      Example: ```mongoimport --db mydb --collection meteorites --file "project\backend\database\nasa-meteorites.json" --jsonArray```
+      
+      This will import the JSON data into MongoDB collection "meteorites"
 
 ### Run Project
 

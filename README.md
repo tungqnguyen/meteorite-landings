@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Meteorite Landings
 
-## Available Scripts
+This project uses the MERN stack. It will display list of meteorites landings by year or by class of meteorite (recclass). It can sort the list by mass in ascending order. 
 
-In the project directory, you can run:
+The list of meteorites can either be display by a table or a Map using Open Street Map with landing spots.
 
-### `yarn start`
+### Setup
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project use MongoDB for database, hence, please download MongoDB before running the project.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Please visit [MongoDB download page](https://www.mongodb.com/download-center/community) and download version 4.2.1
 
-### `yarn test`
+2. After installing MongoDB, initialize the database by locating to ```repo\backend\database``` and run command ```node createDb.js``` in your terminal to create the database and collection.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Import JSON file into database:
 
-### `yarn build`
+      From your terminal, locate to ```path\to\MongoDB\Server\4.2\bin``` where your MongoDB is installed, default is ```C:\Program Files\MongoDB\Server\4.2\bin```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      Then from the terminal,run command: 
+      ```
+      mongoimport --db mydb --collection meoteorites --file "your\path\to\nasa-meteorites.json" --jsonArray
+      ```
+      Example: ```mongoimport --db mydb --collection meoteorites --file "D:\zwift-code-exercise\backend\database\nasa-meteorites.json" --jsonArray```
+      This will import the JSON array into MongoDB collection "meteorites"
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Run Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After installing MongoDB, creating the database and collection, import the JSON data, we are ready to run our project.
 
-### `yarn eject`
+1. Run the server by locating to ``` repo\backend\server ``` and run command ```node server.js```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Now, open a new terminal to run the fron-end application. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  From the project directory, run ```npm start``` to start the front-end React application.

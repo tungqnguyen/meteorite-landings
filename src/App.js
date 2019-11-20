@@ -61,7 +61,7 @@ class App extends Component {
   renderMap() {
     let geoJSON = null;
     if (this.state.data != null && this.state.data.length !== 0) {
-      // this will extract geoJSON Points of the meoteorites data
+      // this will extract geoJSON Points of the meteorites data
       geoJSON = util.extractGeoJSON(this.state.data);
       return (
         <Map data={geoJSON} />

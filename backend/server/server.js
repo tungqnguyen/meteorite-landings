@@ -27,7 +27,7 @@ app.get('/', connectDb, async (req, res) => {
   try {
     const dbo = res.locals.db;
     let records = null;
-    const collection = await dbo.collection('meoteorites');
+    const collection = await dbo.collection('meteorites');
     if (year) {
       // convert string year into same format with year in db
       const convertedYear = new Date(Date.parse(year)).toISOString().replace('Z', '');

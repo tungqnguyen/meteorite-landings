@@ -18,9 +18,9 @@ This project use MongoDB for database, hence, please download MongoDB before run
 
       Then from the terminal,run command: 
       ```
-      mongoimport --db mydb --collection meoteorites --file "your\path\to\nasa-meteorites.json" --jsonArray
+      mongoimport --db mydb --collection meteorites --file "your\path\to\nasa-meteorites.json" --jsonArray
       ```
-      Example: ```mongoimport --db mydb --collection meoteorites --file "D:\zwift-code-exercise\backend\database\nasa-meteorites.json" --jsonArray```
+      Example: ```mongoimport --db mydb --collection meteorites --file "D:\zwift-code-exercise\backend\database\nasa-meteorites.json" --jsonArray```
       This will import the JSON array into MongoDB collection "meteorites"
 
 ### Run Project

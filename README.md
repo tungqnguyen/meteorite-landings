@@ -34,4 +34,9 @@ After installing MongoDB, creating the database and collection, import the JSON 
 
 2. Now, open a new terminal to run the fron-end application. 
 
-  From the project directory, run ```npm start``` to start the front-end React application.
+  From the project directory, run ```npm start``` to start the front-end React application. 
+
+### Note
+
+      You can click the "Mass" table header to sort the result base on its mass.
+

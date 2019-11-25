@@ -38,5 +38,5 @@ After installing MongoDB, creating the database and collection, import the JSON 
 
 ### Note
 
-      You can click the "Mass" table header to sort the result base on its mass.
+  You can click the "Mass" table header to sort the result base on its mass.
 
